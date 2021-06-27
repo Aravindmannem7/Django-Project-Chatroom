@@ -120,22 +120,39 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,"static"),
+]
 ASGI_APPLICATION = "core.routing.application"
+
 CHANNEL_LAYERS = {
     'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            "hosts": [os.environ['REDIS_URL']],
-        },
-    },
-}
+        'BACKEND': 'channels.layers.InMemoryChannelLayer'
 
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": os.environ['REDIS_URL'],
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient"
-        }
     }
 }
+
+
+
+
+
+
+
+# CHANNEL_LAYERS = {
+#     'default': {
+#         'BACKEND': 'channels_redis.core.RedisChannelLayer',
+#         'CONFIG': {
+#             "hosts": [os.environ['REDIS_URL']],
+#         },
+#     },
+# }
+
+# CACHES = {
+#     "default": {
+#         "BACKEND": "django_redis.cache.RedisCache",
+#         "LOCATION": os.environ['REDIS_URL'],
+#         "OPTIONS": {
+#             "CLIENT_CLASS": "django_redis.client.DefaultClient"
+#         }
+#     }
+# }
