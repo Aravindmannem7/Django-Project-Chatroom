@@ -200,14 +200,14 @@ a:hover {
 }
 
 .btn-solid-lg.secondary {
-	border: 1px solid #eb427e;
-	background-color: #eb427e;
+	border: 1px solid #42eb89;
+	background-color: #64eb42;
 }
 
 .btn-solid-lg.secondary:hover {
-	border: 1px solid #eb427e;
+	border: 1px solid #42eb5e;
 	background: transparent;
-	color: #eb427e; /* needs to stay here because of the color property of a tag */
+	color: #48eb42; /* needs to stay here because of the color property of a tag */
 }
 
 .btn-outline-reg {
@@ -587,7 +587,7 @@ input[type='checkbox'] {
 .header {
 	padding-top: 7rem;
 	padding-bottom: 7rem;
-	background: linear-gradient(rgba(197, 234, 249, 1), rgba(255, 255, 255, 1));
+	background: linear-gradient(rgb(7, 7, 7), rgb(22, 22, 22));
 	text-align: center;
 }
 

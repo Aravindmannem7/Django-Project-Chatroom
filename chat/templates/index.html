@@ -33,7 +33,7 @@
 	<!-- Favicon  -->
     <link rel="icon" href="{% static 'web/images/favicon.png' %}">
 </head>
-<body data-spy="scroll" data-target=".fixed-top">
+<body data-spy="scroll" data-target=".fixed-top" style="background-color: rgb(0, 0, 0);">
     
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-light">
@@ -98,7 +98,7 @@
                 <div class="col-lg-6">
                     {% if user.is_authenticated %}
                     <div class="text-container">
-                        <h1 class="h1-large">You are logged in</h1>
+                        <h1 class="h1-large" style="color: rgb(255, 255, 255);">You are logged in</h1>
                         <p class="p-large">Be kind to others , usage of inappropriate words will not entertained read our T & C for more info </p>
                         <!-- <a class="btn-solid-lg" href="#your-link"><i class="fab fa-apple"></i>Download</a> -->
                         <a class="btn-solid-lg secondary" href="/chat/Books"><i class="fab fa-google-play"></i>click here to join chat</a>
@@ -117,7 +117,7 @@
                 <div class="col-lg-6">
                     <div class="image-container">
                          <img class="img-fluid" src="{% static 'web/images/header-smartphone.png' %}" alt="alternative"> 
-                    </div>  end of image-container -->
+                    </div>  
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
